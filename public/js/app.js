@@ -20,7 +20,7 @@ fetch('http://puzzle.mead.io/puzzle').then((response)=>{
      e.preventDefault()
      const l=search.value
      msg.textContent='loading'
-fetch('http://localhost:3000/weather?address='+l).then((response)=>{
+fetch('/weather?address='+l).then((response)=>{
     response.json().then((d)=>{
         if(d.error)
         {

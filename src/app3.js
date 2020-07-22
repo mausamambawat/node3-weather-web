@@ -9,6 +9,9 @@ const p=path.join(__dirname,'../public')
 const viewsp=path.join(__dirname,'../temp/views')
 const ppath=path.join(__dirname,'../temp/partials')
 const app=ex()
+
+const port=process.env.PORT || 3000
+
 console.log(app)
 //setup handle engine and vie wloc
 app.set('view engine','hbs')
@@ -110,6 +113,6 @@ res.render('error',{
 
    
 
-app.listen(3000,()=>{
-    console.log('server is on')
+app.listen(port,()=>{
+    console.log('server is on'+ port)
 })
