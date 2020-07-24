@@ -13,6 +13,8 @@ fetch('http://puzzle.mead.io/puzzle').then((response)=>{
  const search=document.querySelector('input')
  const msg=document.querySelector('#msg1')
  const msg2=document.querySelector('#msg2')
+ const msg3=document.querySelector('#msg3')
+ const msg4=document.querySelector('#msg4')
  
  
 
@@ -28,9 +30,12 @@ fetch('/weather?address='+l).then((response)=>{
            //msg.textContent=d.error
         }
         else{
-            
+            msg2.textContent=l  
         msg.textContent=d.lat
-        msg2.textContent=l
+        
+        msg3.textContent=d.longit
+        msg4.textContent=d.data
+
         console.log(d)
         }
     })

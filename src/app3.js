@@ -46,6 +46,7 @@ return res.send(er)
            lat:lat,
            longit:long,
            data:d
+          
        })
        })
   
